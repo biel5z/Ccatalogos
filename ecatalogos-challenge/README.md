@@ -1,73 +1,39 @@
-# React + TypeScript + Vite
+# Desafio Front-End - Força de Vendas 🛍️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma reprodução funcional da tela de compras do App Força de Vendas, desenvolvido como parte do teste técnico para a **e-Catálogos**.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **React + TypeScript** (Vite)
+* **Styled Components** (Estilização CSS-in-JS)
+* **Zustand** (Gerenciamento de Estado Global) + **Persistence** (LocalStorage)
+* **Lucide React** (Ícones)
 
-## React Compiler
+## ✨ Funcionalidades Implementadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* ✅ **Layout Fiel:** Reprodução visual da interface mobile.
+* ✅ **Carrossel de Produtos:** Navegação fluida entre os itens.
+* ✅ **Cálculo em Tempo Real:**
+    * **Atual:** Soma dos itens selecionados no produto visível.
+    * **Acumulado:** Soma total de todos os produtos no carrinho.
+* ✅ **Persistência de Dados:** O estado do carrinho é salvo automaticamente. Se recarregar a página (F5), os itens continuam lá.
+* ✅ **Busca e Detalhes:** Modais funcionais para busca e informações do produto.
+* ✅ **Imagens Reais:** Integração com banco de imagens para demonstração visual rica.
 
-## Expanding the ESLint configuration
+## 🛠️ Como rodar o projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1.  Clone este repositório:
+    ```bash
+    git clone <SEU_LINK_DO_GITHUB_AQUI>
+    ```
+2.  Instale as dependências:
+    ```bash
+    npm install
+    ```
+3.  Rode o servidor de desenvolvimento:
+    ```bash
+    npm run dev
+    ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+Desenvolvido por **Gabriel Correia Reis**.
